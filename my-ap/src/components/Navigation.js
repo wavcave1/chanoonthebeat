@@ -11,8 +11,8 @@ function Navigation({ isLoggedIn, onLogout }) {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          Portfolio
+        <Link to="/" className="nav-logo bbh-bogle-regular">
+          chano on the beat
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">

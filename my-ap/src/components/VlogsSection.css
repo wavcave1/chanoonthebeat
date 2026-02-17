@@ -1,6 +1,6 @@
 .vlogs-section {
   padding: 80px 50px;
-  background: #f5f5f5;
+  background: #E4E4DE;
   min-height: 600px;
 }
 
@@ -12,14 +12,14 @@
 .vlogs-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #1B1B1B;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .vlogs-subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: #595f39;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -34,7 +34,7 @@
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(27, 27, 27, 0.1);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -42,13 +42,13 @@
 
 .vlog-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(27, 27, 27, 0.2);
 }
 
 .vlog-thumbnail {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,11 +65,11 @@
 .vlog-content h3 {
   font-size: 1.3rem;
   margin: 0 0 10px 0;
-  color: #333;
+  color: #1B1B1B;
 }
 
 .vlog-date {
-  color: #999;
+  color: #8a8a8a;
   font-size: 0.9rem;
   margin: 0 0 15px 0;
 }
@@ -77,8 +77,8 @@
 .vlog-button {
   align-self: flex-start;
   padding: 10px 20px;
-  background: #00d4ff;
-  color: #000;
+  background: #595f39;
+  color: #E4E4DE;
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -88,7 +88,7 @@
 }
 
 .vlog-button:hover {
-  background: #00b8d4;
+  background: #6b7242;
   transform: scale(1.05);
 }
 

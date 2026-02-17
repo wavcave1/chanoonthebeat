@@ -1,6 +1,6 @@
 .signup-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,7 +21,7 @@
 
 .signup-box h1 {
   text-align: center;
-  color: #333;
+  color: #1B1B1B;
   margin-bottom: 30px;
   font-size: 2rem;
 }
@@ -45,7 +45,7 @@
 
 .form-group label {
   margin-bottom: 8px;
-  color: #333;
+  color: #1B1B1B;
   font-weight: bold;
   font-size: 0.95rem;
 }
@@ -61,8 +61,8 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+  border-color: #595f39;
+  box-shadow: 0 0 8px rgba(89, 95, 57, 0.3);
 }
 
 .error-message {
@@ -77,8 +77,8 @@
 
 .signup-button {
   padding: 12px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
+  color: #E4E4DE;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -92,7 +92,7 @@
 
 .signup-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 10px 20px rgba(89, 95, 57, 0.4);
 }
 
 .signup-button:active {
@@ -102,19 +102,19 @@
 .login-link {
   text-align: center;
   margin-top: 20px;
-  color: #666;
+  color: #595f39;
   font-size: 0.95rem;
 }
 
 .login-link a {
-  color: #667eea;
+  color: #595f39;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
 
 .login-link a:hover {
-  color: #764ba2;
+  color: #1B1B1B;
   text-decoration: underline;
 }
 

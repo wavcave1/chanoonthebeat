@@ -1,6 +1,6 @@
 .footer {
-  background: #1a1a1a;
-  color: #fff;
+  background: #1B1B1B;
+  color: #E4E4DE;
   padding: 60px 50px 20px;
 }
 
@@ -19,35 +19,35 @@
 .footer-section h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #00d4ff;
+  color: #595f39;
 }
 
 .label-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #fff;
+  color: #E4E4DE;
   margin-bottom: 10px;
 }
 
 .label-desc {
-  color: #aaa;
+  color: #8a8a8a;
   margin: 0;
 }
 
 .footer-section p {
   margin: 10px 0;
   line-height: 1.6;
-  color: #aaa;
+  color: #8a8a8a;
 }
 
 .footer-section a {
-  color: #00d4ff;
+  color: #595f39;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .footer-section a:hover {
-  color: #fff;
+  color: #E4E4DE;
   text-decoration: underline;
 }
 
@@ -60,15 +60,15 @@
 .social-link {
   display: inline-block;
   padding: 8px 16px;
-  background: #2d2d2d;
+  background: #2a2a26;
   border-radius: 4px;
   transition: all 0.3s ease;
   width: fit-content;
 }
 
 .social-link:hover {
-  background: #00d4ff;
-  color: #000;
+  background: #595f39;
+  color: #1B1B1B;
 }
 
 .footer-bottom {

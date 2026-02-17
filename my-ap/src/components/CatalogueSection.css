@@ -12,14 +12,14 @@
 .catalogue-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #333;
+  color: #1B1B1B;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .catalogue-subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: #595f39;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -31,23 +31,23 @@
 }
 
 .release-card {
-  background: #f9f9f9;
+  background: #f9f9f7;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(27, 27, 27, 0.1);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .release-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(27, 27, 27, 0.2);
 }
 
 .release-cover {
   width: 100%;
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,7 @@
 .release-info h3 {
   font-size: 1.2rem;
   margin: 0 0 8px 0;
-  color: #333;
+  color: #1B1B1B;
 }
 
 .release-artist {
@@ -71,7 +71,7 @@
 }
 
 .release-date {
-  color: #999;
+  color: #8a8a8a;
   font-size: 0.85rem;
   margin: 0 0 15px 0;
 }
@@ -79,8 +79,8 @@
 .listen-button {
   width: 100%;
   padding: 12px;
-  background: #667eea;
-  color: white;
+  background: #595f39;
+  color: #E4E4DE;
   border: none;
   border-radius: 4px;
   font-weight: bold;
@@ -89,7 +89,7 @@
 }
 
 .listen-button:hover {
-  background: #764ba2;
+  background: #6b7242;
   transform: scale(1.02);
 }
 
