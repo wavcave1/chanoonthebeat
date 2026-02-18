@@ -19,7 +19,7 @@ footer {
 .footer-section h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #F3E9D2;
+  color: #F6F1E8;
 }
 
 .label-name {
@@ -41,7 +41,7 @@ footer {
 }
 
 .footer-section a {
-  color: #F3E9D2;
+  color: #F6F1E8;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -67,7 +67,7 @@ footer {
 }
 
 .social-link:hover {
-  background: #F3E9D2;
+  background: #F6F1E8;
   color: #1B1B1B;
 }
 
@@ -88,4 +88,3 @@ footer {
     gap: 30px;
   }
 }
-
