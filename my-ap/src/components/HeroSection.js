@@ -57,7 +57,7 @@ function HeroSection() {
               </div>
             ))
           ) : (
-            <p>No credits found</p>
+            <p>Chanoonthebeat is a talented rap producer from Nashville, known for his hard-hitting, signature sound that blends Southern trap energy with polished production. He has worked with prominent artists like Trapperman Dale, Eddie Valero, and a growing roster of talent, earning a reputation for crafting beats that elevate any project. With a relentless work ethic and a passion for creating music that resonates, Chano is quickly becoming a name to watch in the hip-hop scene.</p>
           )}
         </div>
       </div>
