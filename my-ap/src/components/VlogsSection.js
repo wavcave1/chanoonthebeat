@@ -32,7 +32,7 @@ function VlogsSection() {
   return (
     <section id="vlogs" className="vlogs-section">
       <div className="vlogs-container">
-        <h2 className="vlogs-title">Latest Vlogs</h2>
+        <h2 className="vlogs-title">Latest Studio Content</h2>
         <p className="vlogs-subtitle">Watch my latest videos and updates</p>
         
         <div className="vlogs-grid">

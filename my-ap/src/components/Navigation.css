@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background: linear-gradient(90deg, #1B1B1B 0%, #2a2a26 100%);
+  background: #1B1B1B;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@
 }
 
 .nav-link-signup {
-  background: #595f39;
+  background: #0F2143;
   color: #E4E4DE;
   padding: 8px 20px;
   border-radius: 4px;
@@ -70,13 +70,13 @@
 }
 
 .nav-link-signup:hover {
-  background: #6b7242;
+  background: #152d52;
   color: #E4E4DE;
   border-bottom: none;
 }
 
 .nav-link-logout {
-  background: #ff6b6b;
+  background: #0F2143;
   color: #fff;
   padding: 8px 20px;
   border-radius: 4px;
@@ -87,7 +87,7 @@
 }
 
 .nav-link-logout:hover {
-  background: #ff5252;
+  background: #152d52;
   border-bottom: none;
 }
 

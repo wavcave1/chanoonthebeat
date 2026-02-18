@@ -47,7 +47,7 @@
 .release-cover {
   width: 100%;
   aspect-ratio: 1;
-  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
+  background: linear-gradient(135deg, #354E56 0%, #8B6212 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@
 .listen-button {
   width: 100%;
   padding: 12px;
-  background: #595f39;
+  background: #8B6212;
   color: #E4E4DE;
   border: none;
   border-radius: 4px;
@@ -89,7 +89,7 @@
 }
 
 .listen-button:hover {
-  background: #6b7242;
+  background: #a67a1a;
   transform: scale(1.02);
 }
 

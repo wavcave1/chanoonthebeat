@@ -1,6 +1,6 @@
 .signup-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
+  background: linear-gradient(135deg, #354E56 0%, #8B6212 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,8 +61,8 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #595f39;
-  box-shadow: 0 0 8px rgba(89, 95, 57, 0.3);
+  border-color: #354E56;
+  box-shadow: 0 0 8px rgba(53, 78, 86, 0.3);
 }
 
 .error-message {
@@ -77,7 +77,7 @@
 
 .signup-button {
   padding: 12px;
-  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
+  background: #0F2143;
   color: #E4E4DE;
   border: none;
   border-radius: 5px;
@@ -92,7 +92,7 @@
 
 .signup-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(89, 95, 57, 0.4);
+  box-shadow: 0 10px 20px rgba(15, 33, 67, 0.4);
 }
 
 .signup-button:active {

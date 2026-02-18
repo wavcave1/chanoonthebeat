@@ -5,8 +5,8 @@ function HeroSection() {
   return (
     <div className="hero-section">
       <div className="hero-content">
-        <h1 className="hero-title">Welcome to My Portfolio</h1>
-        <p className="hero-subtitle">Explore my music, vlogs, and releases</p>
+        <h1 className="hero-title">THE CATALOG</h1>
+        <p className="hero-subtitle">Production credits spanning charting releases and industry recognition.</p>
         <a href="#catalogue" className="hero-button">
           Explore Now
         </a>

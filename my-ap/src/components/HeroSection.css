@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 100px 50px;
-  background: linear-gradient(135deg, #595f39 0%, #6b7242 100%);
+  background: linear-gradient(135deg, #354E56 0%, #8B6212 100%);
   color: #E4E4DE;
   min-height: 500px;
   gap: 50px;
@@ -31,7 +31,7 @@
 .hero-button {
   display: inline-block;
   padding: 15px 40px;
-  background: #C4C5BA;
+  background: #FFFFFF;
   color: #1B1B1B;
   text-decoration: none;
   border-radius: 5px;

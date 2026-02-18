@@ -19,7 +19,7 @@
 .footer-section h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #595f39;
+  color: #8B6212;
 }
 
 .label-name {
@@ -41,7 +41,7 @@
 }
 
 .footer-section a {
-  color: #595f39;
+  color: #8B6212;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -67,7 +67,7 @@
 }
 
 .social-link:hover {
-  background: #595f39;
+  background: #8B6212;
   color: #1B1B1B;
 }
 

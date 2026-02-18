@@ -22,7 +22,7 @@ function Navigation({ isLoggedIn, onLogout }) {
           </li>
           <li className="nav-item">
             <a href="#vlogs" className="nav-link">
-              Vlogs
+              Studio Content
             </a>
           </li>
           <li className="nav-item">

@@ -8,24 +8,16 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h3>Label</h3>
-            <p className="label-name">Your Label Name</p>
-            <p className="label-desc">Creating amazing music and content</p>
+            <p className="label-name">Street Orchestra</p>
+            <p className="label-desc">Production Team</p>
+            <p className="label-desc">Nashville, TN</p>
           </div>
 
           <div className="footer-section">
             <h3>Contact Info</h3>
             <p>
               <strong>Email:</strong>{' '}
-              <a href="mailto:contact@example.com">contact@example.com</a>
-            </p>
-            <p>
-              <strong>Phone:</strong>{' '}
-              <a href="tel:+1234567890">+1 (234) 567-8900</a>
-            </p>
-            <p>
-              <strong>Address:</strong> <br />
-              123 Music Street <br />
-              City, State 12345
+              <a href="mailto:chano@chanoonthebeat.com">chano@chanoonthebeat.com</a>
             </p>
           </div>
 
@@ -52,7 +44,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 Your Portfolio. All rights reserved.</p>
+          <p>&copy; 2024 Chano On The Beat. All rights reserved.</p>
         </div>
       </div>
     </footer>
