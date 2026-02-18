@@ -1,71 +1,65 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './CatalogueSection.css';
 
 function CatalogueSection() {
-  const releases = [
-    {
-      id: 1,
-      title: 'Album Name 1',
-      artist: 'Your Name',
-      date: '2024-01-20',
-      cover: '🎵',
-    },
-    {
-      id: 2,
-      title: 'Single Release',
-      artist: 'Your Name',
-      date: '2024-01-10',
-      cover: '🎵',
-    },
-    {
-      id: 3,
-      title: 'EP Collection',
-      artist: 'Your Name',
-      date: '2023-12-15',
-      cover: '🎵',
-    },
-    {
-      id: 4,
-      title: 'Collaborations',
-      artist: 'Featuring Artists',
-      date: '2023-11-30',
-      cover: '🎵',
-    },
-    {
-      id: 5,
-      title: 'Remix Pack',
-      artist: 'Your Name',
-      date: '2023-11-10',
-      cover: '🎵',
-    },
-    {
-      id: 6,
-      title: 'Live Sessions',
-      artist: 'Your Name',
-      date: '2023-10-25',
-      cover: '🎵',
-    },
-  ];
+  const [credits, setCredits] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchCredits = async () => {
+      try {
+        setLoading(true);
+        const profileId = '0676f4ef-0134-4a05-b15d-24ac6cb6dd58';
+        const response = await fetch(
+          `https://api.developer.muso.ai/v4/profiles/${profileId}/credits?sort=popularity&direction=DESC&page=1`
+        );
+        const result = await response.json();
+        
+        if (result.result === 'ok' && result.data) {
+          setCredits(result.data);
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCredits();
+  }, []);
 
   return (
     <section id="catalogue" className="catalogue-section">
       <div className="catalogue-container">
-        <h2 className="catalogue-title">Catalogue & Releases</h2>
-        <p className="catalogue-subtitle">Explore all my music releases</p>
+        <h2 className="catalogue-title">Credits & Releases</h2>
+        <p className="catalogue-subtitle">Explore all production credits</p>
         
-        <div className="releases-grid">
-          {releases.map((release) => (
-            <div key={release.id} className="release-card">
-              <div className="release-cover">{release.cover}</div>
-              <div className="release-info">
-                <h3>{release.title}</h3>
-                <p className="release-artist">{release.artist}</p>
-                <p className="release-date">{release.date}</p>
-                <button className="listen-button">Listen Now</button>
+        {loading ? (
+          <p>Loading credits...</p>
+        ) : error ? (
+          <p>Error loading credits: {error}</p>
+        ) : (
+          <div className="releases-grid">
+            {credits.map((credit) => (
+              <div key={credit.id} className="release-card">
+                <div className="release-cover">
+                  <img 
+                    src={credit.imageUrl || credit.avatarUrl} 
+                    alt={credit.title || credit.name}
+                    className="credit-image"
+                  />
+                </div>
+                <div className="release-info">
+                  <h3>{credit.title || credit.name}</h3>
+                  <p className="release-artist">{credit.artist || 'N/A'}</p>
+                  <p className="release-date">{credit.releaseDate || credit.date || 'N/A'}</p>
+                  <button className="listen-button">View Credit</button>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

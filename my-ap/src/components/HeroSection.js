@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 
 function HeroSection() {
+  const [credits, setCredits] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchCredits = async () => {
+      try {
+        setLoading(true);
+        const profileId = '0676f4ef-0134-4a05-b15d-24ac6cb6dd58';
+        const response = await fetch(
+          `https://api.developer.muso.ai/v4/profiles/${profileId}/credits?sort=popularity&direction=DESC&page=1`
+        );
+        const result = await response.json();
+        
+        if (result.result === 'ok' && result.data) {
+          // Display only top 10
+          setCredits(result.data.slice(0, 10));
+        }
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCredits();
+  }, []);
+
   return (
     <div className="hero-section">
       <div className="hero-content">
@@ -13,10 +41,24 @@ function HeroSection() {
       </div>
       <div className="hero-images">
         <div className="image-grid">
-          <div className="image-placeholder">Image 1</div>
-          <div className="image-placeholder">Image 2</div>
-          <div className="image-placeholder">Image 3</div>
-          <div className="image-placeholder">Image 4</div>
+          {loading ? (
+            <p>Loading credits...</p>
+          ) : error ? (
+            <p>Error loading credits: {error}</p>
+          ) : credits.length > 0 ? (
+            credits.map((credit) => (
+              <div key={credit.id} className="image-placeholder">
+                <img 
+                  src={credit.imageUrl || credit.avatarUrl} 
+                  alt={credit.title || credit.name}
+                  className="credit-avatar"
+                  title={credit.title || credit.name}
+                />
+              </div>
+            ))
+          ) : (
+            <p>No credits found</p>
+          )}
         </div>
       </div>
     </div>
