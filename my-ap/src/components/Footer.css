@@ -1,4 +1,4 @@
-.footer {
+footer {
   background: #1B1B1B;
   color: #E4E4DE;
   padding: 60px 50px 20px;
@@ -19,7 +19,7 @@
 .footer-section h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
-  color: #8B6212;
+  color: #F3E9D2;
 }
 
 .label-name {
@@ -41,7 +41,7 @@
 }
 
 .footer-section a {
-  color: #8B6212;
+  color: #F3E9D2;
   text-decoration: none;
   transition: all 0.3s ease;
 }
@@ -67,7 +67,7 @@
 }
 
 .social-link:hover {
-  background: #8B6212;
+  background: #F3E9D2;
   color: #1B1B1B;
 }
 
@@ -88,3 +88,4 @@
     gap: 30px;
   }
 }
+
