@@ -2,6 +2,64 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Local setup (quick start)
+
+1. Install Node.js 20 LTS (recommended) and npm.
+2. From this folder (`my-ap`), install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the app:
+
+```bash
+npm start
+```
+
+4. Open `http://localhost:3000`.
+
+### If you see `react-scripts: not found`
+
+That means dependencies were not installed successfully. Try:
+
+```bash
+rm -rf node_modules package-lock.json
+npm install
+npm start
+```
+
+If you are behind a corporate proxy, configure npm first:
+
+```bash
+npm config set proxy http://<proxy-host>:<port>
+npm config set https-proxy http://<proxy-host>:<port>
+```
+
+To remove incorrect proxy settings:
+
+```bash
+npm config delete proxy
+npm config delete https-proxy
+```
+
+### If you are running in GitHub Codespaces and see CORS + `pf-signin` errors
+
+If the browser console shows a cross-origin redirect to `github.dev/pf-signin` when loading app assets, your forwarded port is requiring authentication.
+
+Fix:
+
+1. In **Ports** tab, set port `3000` visibility to **Public** (or sign in to the matching GitHub session for the forwarded URL).
+2. Open the forwarded URL again from the same signed-in browser profile.
+3. Hard refresh (Ctrl/Cmd+Shift+R).
+
+As a fallback, run locally outside the forwarded tunnel:
+
+```bash
+npm start
+```
+then open `http://localhost:3000`.
+
 ## Available Scripts
 
 In the project directory, you can run:

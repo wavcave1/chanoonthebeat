@@ -12,6 +12,7 @@ function Navigation({ isLoggedIn, onLogout }) {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo bbh-bogle-regular">
+          <img src="/LOGO.jpeg" alt="Chano on the Beat logo" className="nav-logo-image" />
           chano on the beat
         </Link>
         <ul className="nav-menu">
