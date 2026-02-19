@@ -16,7 +16,7 @@
 }
 
 .bio-text {
-  margin: 0;
+  margin: 0 0 1rem;
   max-width: 760px;
   line-height: 1.6;
   font-size: 1.05rem;
@@ -34,4 +34,8 @@
   .bio-text {
     font-size: 1rem;
   }
+}
+
+.bio-text:last-of-type {
+  margin-bottom: 0;
 }
