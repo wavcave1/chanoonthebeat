@@ -1,0 +1,37 @@
+.bio-section {
+  background: #111111;
+  color: #E4E4DE;
+  padding: 40px 20px 20px;
+}
+
+.bio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio-title {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  color: #8B6212;
+}
+
+.bio-text {
+  margin: 0;
+  max-width: 760px;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .bio-section {
+    padding: 30px 20px 12px;
+  }
+
+  .bio-title {
+    font-size: 1.6rem;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+  }
+}
