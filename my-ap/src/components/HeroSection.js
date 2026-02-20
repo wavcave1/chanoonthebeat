@@ -30,12 +30,17 @@ function HeroSection() {
     fetchCredits();
   }, []);
 
+  const scrollToTop = (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="hero-section">
       <div className="hero-content">
         <h1 className="hero-title">THE CATALOG</h1>
         <p className="hero-subtitle">Production credits spanning charting releases and industry recognition.</p>
-        <a href="#catalogue" className="hero-button">
+        <a href="#top" className="hero-button" onClick={scrollToTop}>
           Explore Now
         </a>
       </div>
