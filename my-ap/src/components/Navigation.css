@@ -1,37 +1,64 @@
+/* Font helper */
 .bbh-bogle-regular {
   font-family: "BBH Bogle", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* Make sure padding doesn't cause width issues */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent content from hiding behind the fixed navbar */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 80px; /* must match .navbar height */
+}
+
+/* NAVBAR (fixed, full-width) */
 .navbar {
   background: #1B1B1B;
   height: 80px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
+
+  position: fixed;   /* stays at top */
   top: 0;
+  left: 0;
+  width: 100%;       /* full width always */
+
   z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Full-width container inside navbar */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
-  max-width: 1200px;
+  max-width: none;     /* ✅ removes the 1200px cap */
   padding: 0 50px;
 }
 
+/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
   color: #fff;
   cursor: pointer;
   text-decoration: none;
+
   font-size: 2rem;
   font-weight: bold;
 }
@@ -43,11 +70,13 @@
   border-radius: 50%;
 }
 
+/* Menu */
 .nav-menu {
   display: flex;
   list-style: none;
   text-align: center;
   gap: 2rem;
+
   margin: 0;
   padding: 0;
 }
@@ -60,6 +89,7 @@
 .nav-link {
   color: #fff;
   text-decoration: none;
+
   padding: 0.5rem 0;
   transition: all 0.3s ease;
   border-bottom: 3px solid transparent;
@@ -70,11 +100,14 @@
   border-bottom: 3px solid #78540d;
 }
 
+/* Signup button */
 .nav-link-signup {
   background: #0F2143;
   color: #E4E4DE;
+
   padding: 8px 20px;
   border-radius: 4px;
+
   border-bottom: none;
   font-weight: bold;
 }
@@ -85,13 +118,17 @@
   border-bottom: none;
 }
 
+/* Logout button */
 .nav-link-logout {
   background: #0F2143;
   color: #fff;
+
   padding: 8px 20px;
   border-radius: 4px;
+
   border: none;
   cursor: pointer;
+
   font-weight: bold;
   font-size: 1rem;
 }
@@ -101,13 +138,19 @@
   border-bottom: none;
 }
 
+/* Mobile */
 @media screen and (max-width: 768px) {
+  body {
+    padding-top: 80px; /* keep spacing consistent */
+  }
+
   .nav-container {
     padding: 0 20px;
   }
 
   .nav-menu {
     gap: 1rem;
+    font-size: 0.9rem;
   }
 
   .nav-logo {
@@ -117,9 +160,5 @@
   .nav-logo-image {
     width: 30px;
     height: 30px;
-  }
-
-  .nav-menu {
-    font-size: 0.9rem;
   }
 }

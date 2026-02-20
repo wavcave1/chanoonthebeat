@@ -39,30 +39,31 @@ function HeroSection() {
           Explore Now
         </a>
       </div>
-      <div className="hero-images">
-        <div className="image-grid">
-          {loading ? (
-            <p>Loading credits...</p>
-          ) : error ? (
-            <p>Error loading credits: {error}</p>
-          ) : credits.length > 0 ? (
-            credits.map((credit) => (
-              <div key={credit.id} className="image-placeholder">
-                <img 
-                  src={credit.imageUrl || credit.avatarUrl} 
-                  alt={credit.title || credit.name}
-                  className="credit-avatar"
-                  title={credit.title || credit.name}
-                />
-              </div>
-            ))
-          ) : (
-            <p classname = "bio-text">
-            Chanoonthebeat is a talented rap producer from Nashville, known for his hard-hitting, signature sound that blends Southern trap energy with polished production. He has worked with prominent artists like Kenny Muney, Trapperman Dale, Eddie Valero, and a growing roster of talent, earning a reputation for crafting beats that elevate any project. With a relentless work ethic and a passion for creating music that resonates, Chano is quickly becoming a name to watch in the hip-hop scene.</p>
-          )}
+    <div className="hero-images">
+  <div className="image-grid">
+        <div className="image-card">
+          <img src="/images/stepbros.jpg" alt="Don Trip & Starlito" />
+          <p>Don Trip & Starlito</p>
+        </div>
+
+        <div className="image-card">
+          <img src="/images/slepton.jpeg" alt="Lil Migo" />
+          <p>Lil Migo</p>
+        </div>
+
+        <div className="image-card">
+          <img src="/images/eddie.jpeg" alt="Eddie Valero" />
+          <p>Eddie Valero</p>
+        </div>
+
+        <div className="image-card">
+          <img src="/images/tuneup.jpeg" alt="Kenny Muney" />
+          <p>Kenny Muney</p>
         </div>
       </div>
-    </div>
+</div>
+      </div>
+   
   );
 }
 

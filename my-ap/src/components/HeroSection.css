@@ -48,7 +48,38 @@
 }
 
 .hero-images {
-  flex: 1;
+  flex: auto;
+  .hero-images {
+  flex: 1;              /* not flex:auto */
+  width: 100%;
+}
+
+.image-grid {
+  width: 100%;
+}
+
+.image-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* makes it square */
+  object-fit: cover;     /* prevents stretching */
+  border-radius: 10px;
+  display: block;
+}
+
+.image-card p {
+  margin: 10px 0 0;
+  font-weight: 600;
+  opacity: 0.95;
+}
+} 
+
+.image-card {
+  text-align: center;
+}
+
+.image-card p {
+  margin-top: 12px;
+  font-weight: 600;
 }
 .bio-text {
    font-size: 1.5rem;
@@ -56,10 +87,12 @@
   opacity: 0.9;
   animation: fadeInUp 0.8s ease 0.2s backwards;
 }
-.image-grid {
+
+ .image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr); /* FORCE 2 columns */
   gap: 20px;
+  width: 100%;
 }
 
 .image-placeholder {

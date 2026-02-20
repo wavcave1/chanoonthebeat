@@ -36,7 +36,7 @@ function Navigation({ isLoggedIn, onLogout }) {
               Contact
             </a>
           </li>
-          {!isLoggedIn ? (
+         {/*} {!isLoggedIn ? (
             <>
               <li className="nav-item">
                 <Link to="/login" className="nav-link">
@@ -55,7 +55,7 @@ function Navigation({ isLoggedIn, onLogout }) {
                 Logout
               </button>
             </li>
-          )}
+          ) }*/}
         </ul>
       </div>
     </nav>

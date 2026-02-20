@@ -1,47 +1,20 @@
 import React from 'react';
 import './Bio.css';
-
 function Bio() {
   return (
     <section className="bio-section" id="bio">
       <div className="bio-container">
-        <h2 className="bio-title">ChanoOnTheBeat</h2>
+        <h2 className="bio-title">Chano On The Beat</h2>
         <div className="bio-content">
-          <img className="bio-image" src="/chano.jpg" alt="Chano On The Beat" />
+          <img className="bio-image" src= "/chano.jpg" alt="Chano On The Beat" />
           <div className="bio-copy">
             <p className="bio-text">
-              In a city long celebrated for its musical heritage, ChanoOnTheBeat is emerging as one of the key
-              figures shaping Nashville’s evolving hip-hop landscape. The Nashville-based producer has built a
-              reputation for crafting hard-hitting records defined by cinematic melodies, commanding drum patterns,
-              and a seamless fusion of Southern trap energy with polished, industry-caliber production. His sound
-              strikes a balance between grit and refinement, delivering records that resonate in the streets while
-              maintaining a level of detail and structure suited for major platforms.
-            </p>
+           In a city renowned for its rich musical legacy, ChanoOnTheBeat is quickly establishing himself as a driving force in Nashville’s evolving hip-hop landscape. The Nashville-based producer is recognized for crafting cinematic soundscapes anchored by commanding drum patterns and a seamless fusion of Southern trap energy with polished, industry-caliber production. His work strikes a rare balance between raw authenticity and refined precision, delivering records that resonate in the streets while meeting the highest commercial standards.
+        </p>
 
-            <p className="bio-text">
-              Chano’s rise has been marked by steady growth and calculated evolution. By prioritizing consistency
-              and artistic development, he has carved out a distinct lane within the region’s rap scene. His
-              growing list of collaborations speaks to his momentum and credibility, including work with Kenny
-              Muney, Trapperman Dale, Eddie Valero, and respected Southern voices such as Starlito and Don Trip.
-              Most recently, his release with Lil Migo further underscored his ability to align with artists who
-              carry strong regional influence while contributing a sound that feels both current and timeless.
-              Across each record, Chano maintains a recognizable sonic identity while adapting seamlessly to the
-              artist in front of him.
-            </p>
-
-            <p className="bio-text">
-              Beyond the technical elements, industry observers point to his collaborative mindset as a defining
-              strength. Rather than simply supplying beats, Chano positions himself as a creative partner, shaping
-              records around an artist’s strengths and helping bring their vision into sharper focus. That
-              commitment to craftsmanship and collaboration has fueled a rapidly expanding catalog and strengthened
-              his standing within Nashville’s growing hip-hop community.
-            </p>
-
-            <p className="bio-text">
-              As his placements continue to grow and his sound evolves, ChanoOnTheBeat represents a new generation
-              of Southern producers who are ambitious, disciplined, and intent on building something lasting. If
-              current momentum is any indication, his presence in the industry is only set to expand.
-            </p>
+        <p className="bio-text">
+        With a steadily expanding catalog, Chano has collaborated with artists including Kenny Muney, Trapperman Dale, Eddie Valero, Starlito, Don Trip, and Lil Migo, solidifying his presence among respected Southern voices. More than a producer, he serves as a creative partner who shapes records around each artist’s strengths while maintaining a distinct and recognizable sonic identity. As his placements continue to grow, ChanoOnTheBeat represents a new generation of disciplined Southern producers building with intention, longevity, and undeniable momentum.
+        </p>
           </div>
         </div>
       </div>

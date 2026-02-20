@@ -22,23 +22,23 @@ function Footer() {
           </div>
 
           <div className="footer-section">
-            <h3>Follow Us</h3>
+            <h3>Keep Up With Me</h3>
             <div className="social-links">
-              <a href="#facebook" className="social-link">
+             {/* <a href="#facebook" className="social-link">
                 Facebook
-              </a>
-              <a href="#twitter" className="social-link">
+              </a> */}
+             {/* <a href="#twitter" className="social-link">
                 Twitter
-              </a>
-              <a href="#instagram" className="social-link">
+              </a> */}
+              <a href="https://www.instagram.com/chanoonthebeat/" className="social-link">
                 Instagram
               </a>
-              <a href="#youtube" className="social-link">
+              <a href="https://www.youtube.com/@chanoonthebeat" className="social-link">
                 YouTube
               </a>
-              <a href="#spotify" className="social-link">
-                Spotify
-              </a>
+           {/* <a href="#spotify" className="social-link">
+                Spotify 
+              </a> */}
             </div>
           </div>
         </div>
