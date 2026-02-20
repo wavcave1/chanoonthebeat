@@ -7,7 +7,7 @@ function Bio() {
       <div className="bio-container">
         <h2 className="bio-title">ChanoOnTheBeat</h2>
         <div className="bio-content">
-          <img className="bio-image" src="/LOGO.jpeg" alt="ChanoOnTheBeat" />
+          <img className="bio-image" src="/chano.jpg" alt="Chano On The Beat" />
           <div className="bio-copy">
             <p className="bio-text">
               In a city long celebrated for its musical heritage, ChanoOnTheBeat is emerging as one of the key
