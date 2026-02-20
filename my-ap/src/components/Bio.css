@@ -15,9 +15,27 @@
   color: #8B6212;
 }
 
+.bio-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.bio-image {
+  width: 240px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(228, 228, 222, 0.25);
+}
+
+.bio-copy {
+  max-width: 760px;
+}
+
 .bio-text {
   margin: 0 0 1rem;
-  max-width: 760px;
   line-height: 1.6;
   font-size: 1.05rem;
 }
@@ -29,6 +47,15 @@
 
   .bio-title {
     font-size: 1.6rem;
+  }
+
+  .bio-content {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .bio-image {
+    width: min(280px, 100%);
   }
 
   .bio-text {
