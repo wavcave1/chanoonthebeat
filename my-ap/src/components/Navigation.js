@@ -8,19 +8,25 @@ function Navigation({ isLoggedIn, onLogout }) {
     window.location.href = '/';
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="nav-logo bbh-bogle-regular">
+        <Link to="/" className="nav-logo bbh-bogle-regular" onClick={scrollToTop}>
           <img src="/LOGO.jpeg" alt="Chano on the Beat logo" className="nav-logo-image" />
           chano on the beat
         </Link>
+
         <ul className="nav-menu">
           <li className="nav-item">
-            <Link to="/" className="nav-link">
+            <Link to="/" className="nav-link" onClick={scrollToTop}>
               Home
             </Link>
           </li>
+
           <li className="nav-item">
             <a href="#vlogs" className="nav-link">
               Studio Content
@@ -28,7 +34,7 @@ function Navigation({ isLoggedIn, onLogout }) {
           </li>
           <li className="nav-item">
             <a href="#catalogue" className="nav-link">
-              Releases
+              Credits
             </a>
           </li>
           <li className="nav-item">
@@ -36,7 +42,8 @@ function Navigation({ isLoggedIn, onLogout }) {
               Contact
             </a>
           </li>
-         {/*} {!isLoggedIn ? (
+
+          {/*} {!isLoggedIn ? (
             <>
               <li className="nav-item">
                 <Link to="/login" className="nav-link">

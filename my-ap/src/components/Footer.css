@@ -1,5 +1,5 @@
 footer {
-  background: #1B1B1B;
+  background: #010100;
   color: #E4E4DE;
   padding: 60px 50px 20px;
 }
@@ -76,6 +76,12 @@ footer {
   padding-top: 20px;
   border-top: 1px solid #333;
   color: #666;
+}
+
+.label-logo {
+  width: 120px;
+  margin: 15px 0;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {

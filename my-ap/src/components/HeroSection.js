@@ -40,9 +40,9 @@ function HeroSection() {
       <div className="hero-content">
         <h1 className="hero-title">THE CATALOG</h1>
         <p className="hero-subtitle">Production credits spanning charting releases and industry recognition.</p>
-        <a href="#top" className="hero-button" onClick={scrollToTop}>
-          Explore Now
-        </a>
+       <a href="#catalogue" className="hero-button">
+        Explore Now
+      </a>
       </div>
     <div className="hero-images">
   <div className="image-grid">

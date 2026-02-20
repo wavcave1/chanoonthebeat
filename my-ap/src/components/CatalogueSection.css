@@ -24,75 +24,50 @@
   margin-bottom: 50px;
 }
 
-.releases-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.release-card {
-  background: #f9f9f7;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(27, 27, 27, 0.1);
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.release-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(27, 27, 27, 0.2);
-}
-
-.release-cover {
-  width: 100%;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, #354E56 0%, #8B6212 100%);
+/* CLEAN LIST */
+.credits-list {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 5rem;
+  flex-direction: column;
 }
 
-.release-info {
-  padding: 20px;
+/* Each row */
+.credit-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(27, 27, 27, 0.12);
 }
 
-.release-info h3 {
+/* Left side text */
+.credit-title h3 {
   font-size: 1.2rem;
-  margin: 0 0 8px 0;
+  margin: 0;
   color: #1B1B1B;
 }
 
-.release-artist {
+.credit-artist {
   color: #666;
   font-size: 0.95rem;
-  margin: 0 0 5px 0;
+  margin: 6px 0 0 0;
 }
 
-.release-date {
+/* Right side date */
+.credit-date {
   color: #8a8a8a;
-  font-size: 0.85rem;
-  margin: 0 0 15px 0;
+  font-size: 0.9rem;
+  white-space: nowrap; /* keeps date on one line */
+  padding-top: 2px;
 }
 
-.listen-button {
-  width: 100%;
-  padding: 12px;
-  background: #8B6212;
-  color: #E4E4DE;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* Optional: subtle hover like a publicist/EPK page */
+.credit-row:hover {
+  background: rgba(53, 78, 86, 0.05);
 }
 
-.listen-button:hover {
-  background: #a67a1a;
-  transform: scale(1.02);
-}
-
+/* MOBILE */
 @media screen and (max-width: 768px) {
   .catalogue-section {
     padding: 50px 20px;
@@ -102,8 +77,17 @@
     font-size: 2rem;
   }
 
-  .releases-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+  .catalogue-subtitle {
+    margin-bottom: 30px;
+  }
+
+  .credit-row {
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px 0;
+  }
+
+  .credit-date {
+    padding-top: 0;
   }
 }
