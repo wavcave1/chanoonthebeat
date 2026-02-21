@@ -3,7 +3,7 @@ import './VlogsSection.css';
 
 function VlogsSection() {
   const vlogs = [
-    {
+   {/* {
       id: 1,
       title: 'My Music Journey',
       date: '2024-01-15',
@@ -24,18 +24,18 @@ function VlogsSection() {
     {
       id: 4,
       title: 'On Tour',
-      date: '2023-12-28',
+      date: '2023-12-28',       
       thumbnail: '🎬',
     },
   ];
-
+*/}
   return (
     <section id="vlogs" className="vlogs-section">
       <div className="vlogs-container">
         <h2 className="vlogs-title">Latest Studio Content</h2>
-        <p className="vlogs-subtitle">Watch my latest videos and updates</p>
+  {/* <p className="vlogs-subtitle">Watch my latest videos and updates</p> */}
         
-        <div className="vlogs-grid">
+  {/* <div className="vlogs-grid">
           {vlogs.map((vlog) => (
             <div key={vlog.id} className="vlog-card">
               <div className="vlog-thumbnail">{vlog.thumbnail}</div>
@@ -43,8 +43,8 @@ function VlogsSection() {
                 <h3>{vlog.title}</h3>
                 <p className="vlog-date">{vlog.date}</p>
                 <button className="vlog-button">Watch</button>
-              </div>
-            </div>
+              </div> 
+            </div> */}
           ))}
         </div>
       </div>
