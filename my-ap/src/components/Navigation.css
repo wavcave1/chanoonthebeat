@@ -100,6 +100,10 @@ body {
   border-bottom: 3px solid #78540d;
 }
 
+/* Toggle label by screen size */
+.nav-mobile { display: none; }
+.nav-desktop { display: inline; }
+
 /* Signup button */
 .nav-link-signup {
   background: #0F2143;
@@ -161,4 +165,7 @@ body {
     width: 30px;
     height: 30px;
   }
+
+  .nav-desktop { display: none; }
+  .nav-mobile { display: inline; }
 }
