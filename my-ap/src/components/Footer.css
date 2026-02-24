@@ -44,6 +44,8 @@ footer {
   color: #F6F1E8;
   text-decoration: none;
   transition: all 0.3s ease;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .footer-section a:hover {

@@ -12,7 +12,8 @@ function Navigation({ isLoggedIn, onLogout }) {
       <div className="nav-container">
         <Link to="/" className="nav-logo bbh-bogle-regular" onClick={scrollToTop}>
           <img src="/LOGO.jpeg" alt="Chano on the Beat logo" className="nav-logo-image" />
-          chano on the beat
+          <span className="nav-logo-desktop">chano on the beat</span>
+          <span className="nav-logo-mobile">chano</span>
         </Link>
 
         <ul className="nav-menu">

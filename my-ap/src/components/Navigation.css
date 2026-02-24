@@ -1,66 +1,61 @@
-/* Font helper */
 .bbh-bogle-regular {
   font-family: "BBH Bogle", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Make sure padding doesn't cause width issues */
-* {
-  box-sizing: border-box;
-}
-
-/* Prevent content from hiding behind the fixed navbar */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
 
 body {
-  padding-top: 80px; /* must match .navbar height */
+  padding-top: 80px;
 }
 
-/* NAVBAR (fixed, full-width) */
 .navbar {
   background: #010100;
   height: 80px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  position: fixed;   /* stays at top */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;       /* full width always */
-
+  width: 100%;
   z-index: 999;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Full-width container inside navbar */
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  gap: 1rem;
   width: 100%;
-  max-width: none;     /* ✅ removes the 1200px cap */
-  padding: 0 50px;
+  max-width: 100%;
+  padding-inline: clamp(12px, 4vw, 50px);
 }
 
-/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
+  min-width: 0;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
-
   font-size: 2rem;
   font-weight: bold;
+}
+
+.nav-logo-desktop {
+  display: inline;
+}
+
+.nav-logo-mobile {
+  display: none;
 }
 
 .nav-logo-image {
@@ -68,17 +63,17 @@ body {
   height: 36px;
   object-fit: cover;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
-/* Menu */
 .nav-menu {
   display: flex;
   list-style: none;
   text-align: center;
   gap: 2rem;
-
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 .nav-item {
@@ -89,7 +84,6 @@ body {
 .nav-link {
   color: #fff;
   text-decoration: none;
-
   padding: 0.5rem 0;
   transition: all 0.3s ease;
   border-bottom: 3px solid transparent;
@@ -100,18 +94,14 @@ body {
   border-bottom: 3px solid #78540d;
 }
 
-/* Toggle label by screen size */
 .nav-mobile { display: none; }
 .nav-desktop { display: inline; }
 
-/* Signup button */
 .nav-link-signup {
   background: #0F2143;
   color: #E4E4DE;
-
   padding: 8px 20px;
   border-radius: 4px;
-
   border-bottom: none;
   font-weight: bold;
 }
@@ -122,17 +112,13 @@ body {
   border-bottom: none;
 }
 
-/* Logout button */
 .nav-link-logout {
   background: #0F2143;
   color: #fff;
-
   padding: 8px 20px;
   border-radius: 4px;
-
   border: none;
   cursor: pointer;
-
   font-weight: bold;
   font-size: 1rem;
 }
@@ -142,28 +128,41 @@ body {
   border-bottom: none;
 }
 
-/* Mobile */
 @media screen and (max-width: 768px) {
   body {
-    padding-top: 80px; /* keep spacing consistent */
+    padding-top: 80px;
   }
 
   .nav-container {
-    padding: 0 20px;
-  }
-
-  .nav-menu {
-    gap: 1rem;
-    font-size: 0.9rem;
+    gap: 0.5rem;
+    padding-inline: 12px;
   }
 
   .nav-logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .nav-logo-desktop {
+    display: none;
+  }
+
+  .nav-logo-mobile {
+    display: inline;
+  }
+
+  .nav-menu {
+    gap: 0.65rem;
+    font-size: 0.82rem;
+  }
+
+  .nav-item {
+    height: 80px;
+    line-height: 80px;
   }
 
   .nav-logo-image {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
   }
 
   .nav-desktop { display: none; }
