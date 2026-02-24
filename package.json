@@ -1,10 +1,12 @@
 {
-  "devDependencies": {
-    "start-server-and-test": "^2.1.3"
+  "name": "chanoonthebeat",
+  "private": true,
+  "scripts": {
+    "start": "npm --prefix my-ap start",
+    "build": "npm --prefix my-ap run build",
+    "test": "npm --prefix my-ap test -- --watchAll=false"
   },
-  "dependencies": {
-    "build": "^0.1.4",
-    "npm": "^11.10.1",
-    "run": "^1.5.0"
+  "engines": {
+    "node": "18.x"
   }
 }
