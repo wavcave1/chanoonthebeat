@@ -17,9 +17,10 @@ function Footer() {
               alt="Street Orchestra Logo"
               className="label-logo"
             />
-
+            
             <p className="label-desc">Production Team</p>
             <p className="label-desc">Nashville, TN</p>
+            <p className="label-desc">StreetOrchestraBusiness@Gmail.com</p>
           </div>
 
           <div className="footer-section">
