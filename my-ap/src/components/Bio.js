@@ -13,7 +13,7 @@ function Bio() {
         </p>
 
         <p className="bio-text">
-        With a steadily expanding catalog, Chano has collaborated with artists including Kenny Muney, Trapperman Dale, Eddie Valero, Starlito, Don Trip, and Lil Migo, solidifying his presence among respected Southern voices. More than a producer, he serves as a creative partner who shapes records around each artist’s strengths while maintaining a distinct and recognizable sonic identity. As his placements continue to grow, Chano On The Beat represents a new generation of disciplined Southern producers building with intention, longevity, and undeniable momentum.
+        With a steadily expanding catalog, Chano has collaborated with artists including Kenny Muney, Trapperman Dale, Eddie Valero, Starlito, Don Trip, and Lil Migo, solidifying his presence among respected Southern voices. More than a producer, he serves as a creative partner who shapes records around each artist’s strengths while maintaining a distinct and recognizable sonic identity. As his placements continue to grow, Chano represents a new generation of disciplined Southern producers building with intention, longevity, and undeniable momentum.
         </p>
           </div>
         </div>
