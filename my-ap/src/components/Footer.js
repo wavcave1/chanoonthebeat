@@ -20,15 +20,21 @@ function Footer() {
             
             <p className="label-desc">Production Team</p>
             <p className="label-desc">Nashville, TN</p>
-            <p className="label-desc">StreetOrchestraBusiness@Gmail.com</p>
+            
           </div>
 
           <div className="footer-section">
-            <h3>Contact Info</h3>
+            <h3>Contact</h3>
             <p>
               <strong>Email:</strong>{' '}
               <a href="mailto:chano@chanoonthebeat.com">
                 chano@chanoonthebeat.com
+              </a>
+            </p>
+                 <p>
+              <strong>Email:</strong>{' '}
+              <a href="mailto:StreetOrchestraBusiness@Gmail.com">
+                StreetOrchestraBusiness@Gmail.com
               </a>
             </p>
           </div>
