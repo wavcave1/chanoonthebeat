@@ -10,9 +10,27 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+}
+
+img,
+video,
+canvas,
+svg,
+iframe {
+  max-width: 100%;
+}
+
+/* Temporary overflow debugger: set localStorage.debugOverflow = '1' */
+[data-overflowing='true'] {
+  outline: 2px solid #ff006e;
+  outline-offset: -1px;
 }
