@@ -1,5 +1,5 @@
-import React from ‘react’;
-import ‘./Bio.css’;
+import React from 'react';
+import './Bio.css';
 function Bio() {
   return (
     <section className="bio-section" id="bio">
