@@ -1,41 +1,28 @@
 import React from 'react';
 import './HeroSection.css';
+import profile from '../data/profile.json';
 
 function HeroSection() {
   return (
     <div className="hero-section">
       <div className="hero-content">
-        <h1 className="hero-title">THE CATALOG</h1>
-        <p className="hero-subtitle">Production credits spanning charting releases and industry recognition.</p>
-       <a href="#catalogue" className="hero-button">
-        Explore Now
-      </a>
+        <h1 className="hero-title">{profile.hero.title}</h1>
+        <p className="hero-subtitle">{profile.hero.subtitle}</p>
+        <a href="#catalogue" className="hero-button">
+          {profile.hero.ctaLabel}
+        </a>
       </div>
-    <div className="hero-images">
-  <div className="image-grid">
-        <div className="image-card">
-          <img src="/images/stepbros.jpg" alt="Don Trip & Starlito" />
-          <p>Don Trip & Starlito</p>
-        </div>
-
-        <div className="image-card">
-          <img src="/images/slepton.jpeg" alt="Lil Migo" />
-          <p>Lil Migo</p>
-        </div>
-
-        <div className="image-card">
-          <img src="/images/eddie.jpeg" alt="Eddie Valero" />
-          <p>Eddie Valero</p>
-        </div>
-
-        <div className="image-card">
-          <img src="/images/tuneup.jpeg" alt="Kenny Muney" />
-          <p>Kenny Muney</p>
+      <div className="hero-images">
+        <div className="image-grid">
+          {profile.hero.featuredArtists.map((artist, index) => (
+            <div key={index} className="image-card">
+              <img src={artist.image} alt={artist.name} />
+              <p>{artist.name}</p>
+            </div>
+          ))}
         </div>
       </div>
-</div>
-      </div>
-   
+    </div>
   );
 }
 

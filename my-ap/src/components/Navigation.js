@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
+import profile from '../data/profile.json';
 
 function Navigation({ isLoggedIn, onLogout }) {
   const scrollToTop = () => {
@@ -11,8 +12,8 @@ function Navigation({ isLoggedIn, onLogout }) {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo bbh-bogle-regular" onClick={scrollToTop}>
-          <img src="/LOGO.jpeg" alt="Chano on the Beat logo" className="nav-logo-image" />
-          chano on the beat
+          <img src={profile.logo} alt={`${profile.brandName} logo`} className="nav-logo-image" />
+          {profile.brandName}
         </Link>
 
         <ul className="nav-menu">
