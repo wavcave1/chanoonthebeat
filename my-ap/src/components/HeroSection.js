@@ -5,32 +5,40 @@ function HeroSection() {
   return (
     <div className="hero-section">
       <div className="hero-content">
+        {/* TODO: Replace with your section headline */}
         <h1 className="hero-title">THE CATALOG</h1>
-        <p className="hero-subtitle">Production credits spanning charting releases and industry recognition.</p>
+        {/* TODO: Replace with your subtitle/tagline */}
+        <p className="hero-subtitle">[YOUR TAGLINE OR SUBTITLE HERE]</p>
        <a href="#catalogue" className="hero-button">
         Explore Now
       </a>
       </div>
     <div className="hero-images">
   <div className="image-grid">
+        {/* TODO: Replace each image src and label with your featured collaborators */}
+        {/* Recommended image size: 400×400px or 1:1 square ratio */}
         <div className="image-card">
-          <img src="/images/stepbros.jpg" alt="Don Trip & Starlito" />
-          <p>Don Trip & Starlito</p>
+          {/* TODO: Replace with your photo/image */}
+          <img src="images/placeholder.jpg" alt="[FEATURED_ARTIST_1]" />
+          <p>[FEATURED_ARTIST_1]</p>
         </div>
 
         <div className="image-card">
-          <img src="/images/slepton.jpeg" alt="Lil Migo" />
-          <p>Lil Migo</p>
+          {/* TODO: Replace with your photo/image */}
+          <img src="images/placeholder.jpg" alt="[FEATURED_ARTIST_2]" />
+          <p>[FEATURED_ARTIST_2]</p>
         </div>
 
         <div className="image-card">
-          <img src="/images/eddie.jpeg" alt="Eddie Valero" />
-          <p>Eddie Valero</p>
+          {/* TODO: Replace with your photo/image */}
+          <img src="images/placeholder.jpg" alt="[FEATURED_ARTIST_3]" />
+          <p>[FEATURED_ARTIST_3]</p>
         </div>
 
         <div className="image-card">
-          <img src="/images/tuneup.jpeg" alt="Kenny Muney" />
-          <p>Kenny Muney</p>
+          {/* TODO: Replace with your photo/image */}
+          <img src="images/placeholder.jpg" alt="[FEATURED_ARTIST_4]" />
+          <p>[FEATURED_ARTIST_4]</p>
         </div>
       </div>
 </div>

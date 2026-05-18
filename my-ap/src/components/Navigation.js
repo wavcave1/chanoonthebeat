@@ -11,8 +11,10 @@ function Navigation({ isLoggedIn, onLogout }) {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo bbh-bogle-regular" onClick={scrollToTop}>
-          <img src="/LOGO.jpeg" alt="Chano on the Beat logo" className="nav-logo-image" />
-          chano on the beat
+          {/* TODO: Replace with your logo image — recommended size: 50×50px, PNG with transparent background preferred */}
+          <img src="images/placeholder.jpg" alt="[BRAND_NAME] logo" className="nav-logo-image" />
+          {/* TODO: Replace with your brand/artist name */}
+          [BRAND_NAME]
         </Link>
 
         <ul className="nav-menu">
