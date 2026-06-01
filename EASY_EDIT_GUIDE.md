@@ -6,13 +6,14 @@ You only need to edit three small files and swap out some images. Every piece of
 
 ---
 
-## The Three Files You Edit
+## The Four Files You Edit
 
 | File | What it controls |
 |---|---|
 | `my-ap/src/data/profile.json` | Your name, bio, photo, logo, and hero section |
-| `my-ap/src/data/socials.json` | Label info, emails, Instagram, YouTube, copyright |
+| `my-ap/src/data/socials.json` | Label info, emails, Instagram, YouTube, copyright, footer labels |
 | `my-ap/src/data/tracks.json` | Your production credits list |
+| `my-ap/src/data/sections.json` | Which sections to show, hide, reorder, and their labels |
 
 Open any of these files in a plain text editor (Notepad, TextEdit, VS Code — anything works).
 
@@ -110,7 +111,121 @@ Open `my-ap/src/data/tracks.json`. Each track is one line:
 
 ---
 
-## Step 4 — Swap In Your Images
+## Step 4 — Customize Sections (`sections.json`)
+
+Open `my-ap/src/data/sections.json`. This file controls:
+- **Which sections appear** on your site (show/hide)
+- **The order** sections appear in
+- **Section titles and labels** (like "Production Credits" or "Studio Content")
+- **Navigation menu labels** (like "Credits" in the top menu)
+
+### Example structure:
+
+```json
+{
+  "sections": [
+    {
+      "id": "bio",
+      "enabled": true,
+      "order": 1,
+      "anchor": "bio"
+    },
+    {
+      "id": "vlogs",
+      "enabled": true,
+      "order": 3,
+      "anchor": "vlogs",
+      "navLabel": "Studio Content",
+      "navLabelMobile": "Content",
+      "title": "Studio Content Coming Soon"
+    },
+    {
+      "id": "catalogue",
+      "enabled": true,
+      "order": 4,
+      "anchor": "catalogue",
+      "navLabel": "Credits",
+      "title": "Production Credits",
+      "subtitle": "Selected production work and collaborations."
+    }
+  ]
+}
+```
+
+### How to use:
+
+**To hide a section:** Change `"enabled": true` to `"enabled": false`
+
+```json
+{ "id": "vlogs", "enabled": false, ... }
+```
+
+**To reorder sections:** Change the `order` numbers
+
+```json
+{ "id": "catalogue", "order": 2 },    // moves up
+{ "id": "vlogs", "order": 4 }         // moves down
+```
+
+**To change section titles:** Edit the `title` field
+
+```json
+{ "id": "catalogue", "title": "My Credits" }
+```
+
+**To change navigation menu labels:** Edit the `navLabel` field
+
+```json
+{ "id": "catalogue", "navLabel": "My Work" }
+```
+
+---
+
+## Step 5 — Customize Footer Labels (`socials.json`)
+
+Open `my-ap/src/data/socials.json` and find the `footerSections` section at the top:
+
+```json
+{
+  "footerSections": {
+    "label": {
+      "title": "Label",
+      "description": "Production Team"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Keep Up With Me"
+    }
+  },
+  ...
+}
+```
+
+Change these to match your preference. For example:
+
+```json
+{
+  "footerSections": {
+    "label": {
+      "title": "My Studio",
+      "description": "Recording Team"
+    },
+    "contact": {
+      "title": "Get In Touch"
+    },
+    "social": {
+      "title": "Follow Me"
+    }
+  },
+  ...
+}
+```
+
+---
+
+## Step 6 — Swap In Your Images
 
 All images live in one folder: **`my-ap/public/images/`**
 
@@ -141,17 +256,21 @@ If you put the logo directly in `my-ap/public/` (not in the `images` subfolder):
 
 ---
 
-## Which File Controls Which Section
+## Which File Controls What
 
-| Section on the site | Layout file (do not edit) | Data file (edit this) |
-|---|---|---|
-| Navigation bar (logo + name) | `src/components/Navigation.js` | `src/data/profile.json` |
-| Hero (title, subtitle, artist cards) | `src/components/HeroSection.js` | `src/data/profile.json` |
-| Bio (photo + text) | `src/components/Bio.js` | `src/data/profile.json` |
-| Production credits list | `src/components/CatalogueSection.js` | `src/data/tracks.json` |
-| Footer (label, contact, socials) | `src/components/Footer.js` | `src/data/socials.json` |
-| Browser tab title | `my-ap/public/index.html` | Edit the `<title>` tag directly |
-| PWA / home screen name | `my-ap/public/manifest.json` | Edit `short_name` and `name` directly |
+| Section on the site | Data file to edit |
+|---|---|
+| Navigation bar (logo + name) | `src/data/profile.json` |
+| Navigation menu (Home, Credits, Contact, etc.) | `src/data/sections.json` |
+| Hero section (title, subtitle, artist cards) | `src/data/profile.json` |
+| Bio section (photo + text) | `src/data/profile.json` |
+| Vlogs section (title, visibility) | `src/data/sections.json` |
+| Production credits list | `src/data/tracks.json` |
+| Catalogue section (title, subtitle) | `src/data/sections.json` |
+| Footer (label, contact, socials) | `src/data/socials.json` |
+| Footer section titles | `src/data/socials.json` (`footerSections`) |
+| Browser tab title | `my-ap/public/index.html` (edit `<title>` tag) |
+| PWA / home screen name | `my-ap/public/manifest.json` (edit `short_name` and `name`) |
 
 ---
 
@@ -184,8 +303,9 @@ npm run build   →  creates a production build in my-ap/build/
 ## Checklist Before You Launch
 
 - [ ] `profile.json` — brand name, artist name, logo, photo, hero, and bio filled in
-- [ ] `socials.json` — label info, both emails, Instagram and YouTube URLs, copyright year
+- [ ] `socials.json` — label info, both emails, Instagram and YouTube URLs, copyright year, footer labels
 - [ ] `tracks.json` — all production credits added
+- [ ] `sections.json` — review section order, visibility, titles, and nav labels
 - [ ] All image files dropped into `my-ap/public/images/` and paths updated in the JSON files
 - [ ] `my-ap/public/index.html` `<title>` tag updated with your name
 - [ ] `my-ap/public/manifest.json` `short_name` and `name` updated

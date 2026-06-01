@@ -1,0 +1,41 @@
+{
+  "sections": [
+    {
+      "id": "bio",
+      "enabled": true,
+      "order": 1,
+      "anchor": "bio"
+    },
+    {
+      "id": "hero",
+      "enabled": true,
+      "order": 2,
+      "anchor": "hero"
+    },
+    {
+      "id": "vlogs",
+      "enabled": true,
+      "order": 3,
+      "anchor": "vlogs",
+      "navLabel": "Studio Content",
+      "navLabelMobile": "Content",
+      "title": "Studio Content Coming Soon"
+    },
+    {
+      "id": "catalogue",
+      "enabled": true,
+      "order": 4,
+      "anchor": "catalogue",
+      "navLabel": "Credits",
+      "title": "Production Credits",
+      "subtitle": "Selected production work and collaborations."
+    },
+    {
+      "id": "footer",
+      "enabled": true,
+      "order": 5,
+      "anchor": "contact",
+      "navLabel": "Contact"
+    }
+  ]
+}

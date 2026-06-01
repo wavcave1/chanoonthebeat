@@ -22,6 +22,36 @@ This project is a React-based producer/artist portfolio site. Follow the steps b
 
 ---
 
+### `my-ap/src/data/sections.json` — Section Configuration
+
+This file controls which sections appear, in what order, and what they're labeled.
+
+| Field | Default Value | What to Change |
+|---|---|---|
+| `enabled` | `true` | Set to `false` to hide a section from the site |
+| `order` | `1`, `2`, `3`... | Change numbers to reorder sections (lower numbers appear first) |
+| `navLabel` | `"Studio Content"`, `"Credits"`, `"Contact"` | Change to customize navigation menu labels |
+| `navLabelMobile` | `"Content"` (for vlogs) | Mobile-specific label (shorter versions for small screens) |
+| `title` | `"Studio Content Coming Soon"`, `"Production Credits"` | Change section heading text |
+| `subtitle` | `"Selected production work and collaborations."` | Change description text below section title |
+
+**Example:** To hide the Vlogs section, change `"enabled": true` to `"enabled": false` in the vlogs object.
+
+---
+
+### `my-ap/src/data/socials.json` — Footer Section Labels
+
+At the top of `socials.json`, the `footerSections` object controls footer labels:
+
+| Field | Default Value | What to Change |
+|---|---|---|
+| `footerSections.label.title` | `"Label"` | Title for the label section in footer |
+| `footerSections.label.description` | `"Production Team"` | Subtitle under label name |
+| `footerSections.contact.title` | `"Contact"` | Title for the contact section |
+| `footerSections.social.title` | `"Keep Up With Me"` | Title for the social media section |
+
+---
+
 ### `my-ap/src/components/Navigation.js`
 
 | Placeholder | Replace With | Notes |
@@ -29,6 +59,7 @@ This project is a React-based producer/artist portfolio site. Follow the steps b
 | `images/placeholder.jpg` (logo) | Your logo image path | Place image in `my-ap/public/`. Recommended: 50×50px, PNG with transparent background. Reference as `/your-logo.png` |
 | `[BRAND_NAME]` (img alt) | Your brand/artist name | Used as the image alt text |
 | `[BRAND_NAME]` (link text) | Your brand/artist name | Displayed as the nav text next to your logo |
+| Nav menu items (Studio Content, Credits, Contact) | Configured in `sections.json` | Edit nav labels in `src/data/sections.json` instead of hardcoding |
 
 ---
 
@@ -58,26 +89,39 @@ The hero title `THE CATALOG` can also be changed to match your preferred section
 
 ### `my-ap/src/components/Footer.js`
 
-| Placeholder | Replace With | Notes |
+**To customize footer section titles:**
+- Edit `src/data/socials.json`
+- Find the `footerSections` object at the top
+- Update `label.title`, `contact.title`, `social.title`, and `label.description`
+
+**To customize footer content:**
+
+| Field | Replace With | Location in socials.json |
 |---|---|---|
-| `[LABEL_NAME]` (text) | Your label or team name | Displayed under the "Label" heading |
-| `images/placeholder.jpg` (label logo) | Your label logo image path | Place in `my-ap/public/images/`. Recommended: 200×200px, PNG with transparent background |
-| `[LABEL_NAME]` (img alt) | Your label or team name | Alt text for the logo |
-| `[CITY], [STATE]` | Your city and state/region | e.g. `Nashville, TN` or `Atlanta, GA` |
-| `you@yourdomain.com` | Your primary contact email | Updates both the `href` and display text |
-| `yourbusiness@email.com` | Your business/booking email | Updates both the `href` and display text |
-| `[YOUR_INSTAGRAM_HANDLE]` | Your Instagram username | Full URL becomes `https://www.instagram.com/yourhandle/` |
-| `[YOUR_YOUTUBE_HANDLE]` | Your YouTube channel handle | Full URL becomes `https://www.youtube.com/@yourhandle` |
-| `[YEAR]` | Current copyright year | e.g. `2026` |
-| `[ARTIST_NAME]` (copyright) | Your artist or brand name | Appears in the footer copyright line |
+| Label name | Your label or team name | `label.name` |
+| Label logo | Your label logo image path | `label.logo` |
+| City & state | Your city and state/region (e.g. `Nashville, TN`) | `label.city`, `label.state` |
+| Primary email | Your main contact email | `contact.primaryEmail` |
+| Business email | Your business/booking email | `contact.businessEmail` |
+| Instagram URL | Your full Instagram URL | `social.instagram` |
+| YouTube URL | Your full YouTube URL | `social.youtube` |
+| Copyright year | Current year (e.g. `2026`) | `copyright.year` |
+| Copyright name | Your artist or brand name | `copyright.name` |
 
 ---
 
 ### `my-ap/src/components/CatalogueSection.js`
 
-This file contains the `releases` array — your full production credits list.
+The catalogue section displays your production credits. Section title and subtitle are now controlled via `sections.json`.
 
-Each entry follows this shape:
+**To customize the title and subtitle:**
+- Edit `src/data/sections.json`
+- Find the `"catalogue"` section object
+- Update `"title"` (e.g., `"Production Credits"`)
+- Update `"subtitle"` (e.g., `"My production work"`)
+
+**To add your production credits:**
+Edit `my-ap/src/data/tracks.json`. Each entry follows this shape:
 
 ```js
 { id: 1, title: "Song Title", artist: "Artist Name", date: "YYYY-MM-DD" }
@@ -93,8 +137,6 @@ Each entry follows this shape:
 **To add credits:** Copy one of the existing `{ id, title, artist, date }` lines, increment the `id`, and fill in your data. You can add as many entries as needed.
 
 **To remove placeholder credits:** Delete any of the 5 example entries and replace with your own.
-
-> Note: The `<!-- TODO: Add your track data -->` comment in the source marks the `releases` array location.
 
 ---
 

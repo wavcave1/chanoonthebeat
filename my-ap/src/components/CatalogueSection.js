@@ -8,7 +8,7 @@ function formatDate(iso) {
   return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 }
 
-function CatalogueSection() {
+function CatalogueSection({ title = "Production Credits", subtitle = "Selected production work and collaborations." }) {
   const sorted = useMemo(() => {
     return [...tracks].sort((a, b) => new Date(b.date) - new Date(a.date));
   }, []);
@@ -16,9 +16,9 @@ function CatalogueSection() {
   return (
     <section id="catalogue" className="catalogue-section">
       <div className="catalogue-container">
-        <h2 className="catalogue-title">Production Credits</h2>
+        <h2 className="catalogue-title">{title}</h2>
         <p className="catalogue-subtitle">
-          Selected production work and collaborations.
+          {subtitle}
         </p>
 
         <div className="credits-list">

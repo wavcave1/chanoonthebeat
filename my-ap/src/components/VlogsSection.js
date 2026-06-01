@@ -1,7 +1,7 @@
 import React from "react";
 import "./VlogsSection.css";
 
-function VlogsSection() {
+function VlogsSection({ title = "Studio Content Coming Soon" }) {
   // const vlogs = [
   //   {
   //     id: 1,
@@ -32,7 +32,7 @@ function VlogsSection() {
   return (
     <section id="vlogs" className="vlogs-section">
       <div className="vlogs-container">
-        <h2 className="vlogs-title">Studio Content Coming Soon</h2>
+        <h2 className="vlogs-title">{title}</h2>
 
         {/* Optional subtitle (leave commented if you want) */}
         {/* <p className="vlogs-subtitle">New uploads are on the way.</p> */}

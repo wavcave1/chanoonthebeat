@@ -1,4 +1,16 @@
 {
+  "footerSections": {
+    "label": {
+      "title": "Label",
+      "description": "Production Team"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Keep Up With Me"
+    }
+  },
   "label": {
     "name": "[LABEL_NAME]",
     "logo": "images/placeholder.jpg",
