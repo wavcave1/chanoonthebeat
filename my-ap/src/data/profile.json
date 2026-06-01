@@ -1,0 +1,21 @@
+{
+  "brandName": "[BRAND_NAME]",
+  "artistName": "[ARTIST_NAME]",
+  "logo": "images/placeholder.jpg",
+  "photo": "images/placeholder.jpg",
+  "hero": {
+    "title": "THE CATALOG",
+    "subtitle": "[YOUR TAGLINE OR SUBTITLE HERE]",
+    "ctaLabel": "Explore Now",
+    "featuredArtists": [
+      { "name": "[FEATURED_ARTIST_1]", "image": "images/placeholder.jpg" },
+      { "name": "[FEATURED_ARTIST_2]", "image": "images/placeholder.jpg" },
+      { "name": "[FEATURED_ARTIST_3]", "image": "images/placeholder.jpg" },
+      { "name": "[FEATURED_ARTIST_4]", "image": "images/placeholder.jpg" }
+    ]
+  },
+  "bio": [
+    "[YOUR BIO HERE — Paragraph 1: Introduce yourself, your city, your sound, and what makes your production style unique.]",
+    "[YOUR BIO HERE — Paragraph 2: List notable collaborators, credits, and your artistic vision going forward.]"
+  ]
+}

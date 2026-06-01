@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import socials from '../data/socials.json';
 
 function Footer() {
   return (
@@ -8,42 +9,38 @@ function Footer() {
         <div className="footer-content">
 
           <div className="footer-section">
-            <h3>Label</h3>
-            <p className="label-name">Street Orchestra</p>
-
-            {/* Logo Added Here */}
+            <h3>{socials.footerSections?.label?.title || 'Label'}</h3>
+            <p className="label-name">{socials.label.name}</p>
             <img
-              src="/images/so-logo-2.jpg"
-              alt="Street Orchestra Logo"
+              src={socials.label.logo}
+              alt={`${socials.label.name} Logo`}
               className="label-logo"
             />
-            
-            <p className="label-desc">Production Team</p>
-            <p className="label-desc">Nashville, TN</p>
-            
+            <p className="label-desc">{socials.footerSections?.label?.description || 'Production Team'}</p>
+            <p className="label-desc">{socials.label.city}, {socials.label.state}</p>
           </div>
 
           <div className="footer-section">
-            <h3>Contact</h3>
+            <h3>{socials.footerSections?.contact?.title || 'Contact'}</h3>
             <p>
               <strong>Email:</strong>{' '}
-              <a href="mailto:chano@chanoonthebeat.com">
-                chano@chanoonthebeat.com
+              <a href={`mailto:${socials.contact.primaryEmail}`}>
+                {socials.contact.primaryEmail}
               </a>
             </p>
-                 <p>
+            <p>
               <strong>Email:</strong>{' '}
-              <a href="mailto:StreetOrchestraBusiness@Gmail.com">
-                StreetOrchestraBusiness@Gmail.com
+              <a href={`mailto:${socials.contact.businessEmail}`}>
+                {socials.contact.businessEmail}
               </a>
             </p>
           </div>
 
           <div className="footer-section">
-            <h3>Keep Up With Me</h3>
+            <h3>{socials.footerSections?.social?.title || 'Keep Up With Me'}</h3>
             <div className="social-links">
               <a
-                href="https://www.instagram.com/chanoonthebeat/"
+                href={socials.social.instagram}
                 className="social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -51,7 +48,7 @@ function Footer() {
                 Instagram
               </a>
               <a
-                href="https://www.youtube.com/@chanoonthebeat"
+                href={socials.social.youtube}
                 className="social-link"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -64,7 +61,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 Chano On The Beat. All rights reserved.</p>
+          <p>&copy; {socials.copyright.year} {socials.copyright.name}. All rights reserved.</p>
         </div>
       </div>
     </footer>

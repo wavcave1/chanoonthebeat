@@ -1,5 +1,5 @@
 {
-  "name": "chanoonthebeat",
+  "name": "your-project-name",
   "private": true,
   "scripts": {
     "start": "npm --prefix my-ap start",

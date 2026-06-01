@@ -1,0 +1,32 @@
+{
+  "footerSections": {
+    "label": {
+      "title": "Label",
+      "description": "Production Team"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Keep Up With Me"
+    }
+  },
+  "label": {
+    "name": "[LABEL_NAME]",
+    "logo": "images/placeholder.jpg",
+    "city": "[CITY]",
+    "state": "[STATE]"
+  },
+  "contact": {
+    "primaryEmail": "you@yourdomain.com",
+    "businessEmail": "yourbusiness@email.com"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/[YOUR_INSTAGRAM_HANDLE]/",
+    "youtube": "https://www.youtube.com/@[YOUR_YOUTUBE_HANDLE]"
+  },
+  "copyright": {
+    "year": "[YEAR]",
+    "name": "[ARTIST_NAME]"
+  }
+}

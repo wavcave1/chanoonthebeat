@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
+import profile from '../data/profile.json';
+import sectionsConfig from '../data/sections.json';
 
 function Navigation({ isLoggedIn, onLogout }) {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
 
+  const navSections = useMemo(() => {
+    return sectionsConfig.sections
+      .filter(s => s.enabled && s.navLabel)
+      .sort((a, b) => a.order - b.order);
+  }, []);
+
   return (
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo bbh-bogle-regular" onClick={scrollToTop}>
-          <img src="/LOGO.jpeg" alt="Chano on the Beat logo" className="nav-logo-image" />
-          chano on the beat
+          <img src={profile.logo} alt={`${profile.brandName} logo`} className="nav-logo-image" />
+          {profile.brandName}
         </Link>
 
         <ul className="nav-menu">
@@ -22,22 +30,20 @@ function Navigation({ isLoggedIn, onLogout }) {
             </Link>
           </li>
 
-          <li className="nav-item">
-            <a href="#vlogs" className="nav-link">
-              <span className="nav-desktop">Studio Content</span>
-              <span className="nav-mobile">Content</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#catalogue" className="nav-link">
-              Credits
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#contact" className="nav-link">
-              Contact
-            </a>
-          </li>
+          {navSections.map(section => (
+            <li key={section.id} className="nav-item">
+              <a href={`#${section.anchor}`} className="nav-link">
+                {section.navLabelMobile ? (
+                  <>
+                    <span className="nav-desktop">{section.navLabel}</span>
+                    <span className="nav-mobile">{section.navLabelMobile}</span>
+                  </>
+                ) : (
+                  section.navLabel
+                )}
+              </a>
+            </li>
+          ))}
 
           {/*} {!isLoggedIn ? (
             <>
